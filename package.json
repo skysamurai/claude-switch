@@ -1,0 +1,32 @@
+{
+  "name": "claude-switch",
+  "version": "1.0.0",
+  "description": "Automatic Claude Code account switching on rate limits — works on macOS, Linux and Windows",
+  "type": "module",
+  "bin": {
+    "claude-switch": "./bin/claude-switch.js"
+  },
+  "scripts": {
+    "check": "node --check lib/*.js bin/claude-switch.js",
+    "test": "node --test 'test/unit/**/*.test.js'"
+  },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "claude-code",
+    "rate-limit",
+    "account-switching",
+    "multi-account",
+    "anthropic"
+  ],
+  "dependencies": {
+    "node-pty": "^1.2.0-beta.11"
+  }
+}
