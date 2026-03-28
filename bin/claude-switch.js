@@ -89,6 +89,14 @@ switch (command) {
     printHelp();
     break;
 
+  case '--version':
+  case '-v': {
+    const { readFileSync } = await import('fs');
+    const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url)));
+    console.log(`claude-switch v${pkg.version}`);
+    break;
+  }
+
   case undefined:
     await cmdRun([]);
     break;
